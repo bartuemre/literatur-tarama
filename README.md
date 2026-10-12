@@ -1,41 +1,61 @@
-# Literatür Tarama Web
+# 📚 Literatür Tarama Web
 
-Türkçe arayüzlü, tarayıcı üzerinden çalışan akademik makale arama aracı. Python veya sunucu kurulumu gerektirmez.
+**Akademik makaleleri keşfetmek, karşılaştırmak ve ön inceleme yapmak için ücretsiz, açık kaynaklı bir web uygulaması.**
 
-## Özellikler
+[![Uygulamayı Aç](https://img.shields.io/badge/🌐_Uygulamayı_Aç-GitHub_Pages-2563eb?style=for-the-badge)](https://bartuemre.github.io/literatur-tarama/)
+![Lisans: MIT](https://img.shields.io/badge/Lisans-MIT-green)
+![Teknoloji](https://img.shields.io/badge/HTML-CSS-JavaScript-orange)
 
-- OpenAlex API ile makale arama
-- En eski yayın yılı filtresi
-- Makale başlığı, yazarlar, dergi, DOI, atıf sayısı ve açık erişim PDF bağlantısı
-- Tek makale seçildiğinde **İncele** paneli (OpenAlex özeti ve terim bazlı yöntem tespiti)
-- Seçili bağlantıları açma, CSV dışa aktarma
-- Google Scholar, DergiPark, ScienceDirect, Semantic Scholar ve YÖK için arama sayfası bağlantıları
+**🔗 Canlı uygulama:** https://bartuemre.github.io/literatur-tarama/
 
-## Kullanım
+Python, VS Code veya başka bir program yüklemeden, doğrudan tarayıcıda çalışır.
 
-1. [GitHub Pages](https://pages.github.com/) adresinde yayımlanan siteyi açın veya `index.html` dosyasını tarayıcıda açın.
-2. Anahtar kelimeleri yazın, en eski yılı belirleyin.
-3. **Makaleleri Direkt Bul** ile OpenAlex sonuçlarını getirin.
-4. Tek makale seçip **İncele** ile mevcut özet bilgilerini görüntüleyin.
-5. CSV dışa aktarın veya yayın/PDF bağlantılarını açın.
+## ✨ Özellikler
 
-## GitHub Pages yayımlama
+- **Doğrudan makale arama:** OpenAlex üzerinden akademik yayınları listeleme
+- **Yıl filtresi:** Seçtiğiniz yıldan önceki yayınları hariç tutma
+- **Yayın bilgileri:** Makale başlığı, dergi/yayın yeri, atıf sayısı ve DOI
+- **Açık erişim:** Mevcutsa PDF bağlantısını görüntüleme
+- **🔎 İncele:** Tek makale seçildiğinde yazarları, kurumları, mevcut özeti ve özette tespit edilen yöntem terimlerini gösterme
+- **Toplu işlemler:** Makale bağlantılarını açma veya kopyalama
+- **CSV dışa aktarma:** Sonuçları tablo olarak kaydetme
+- **Ek kaynak bağlantıları:** Google Scholar, DergiPark, ScienceDirect, Semantic Scholar ve YÖK Tez Merkezi için arama URL'leri
 
-1. GitHub'da herkese açık yeni bir depo açın (ör. `literatur-tarama`).
-2. Bu klasördeki `index.html`, `README.md`, `LICENSE` dosyalarını deponun **kök dizinine** yükleyin.
-3. **Settings → Pages → Build and deployment → Source: Deploy from a branch** seçin.
-4. Branch olarak `main`, klasör olarak `/ (root)` seçip **Save** deyin.
-5. Birkaç dakika sonra `https://KULLANICI_ADIN.github.io/DEPO_ADI/` adresini açın.
+## 🖥️ Uygulama görünümü
 
-## Teknik notlar ve sınırlamalar
+Uygulamanın güncel arayüzünü [canlı demodan](https://bartuemre.github.io/literatur-tarama/) görebilirsiniz.
 
-- OpenAlex API kullanır; arama için internet gerekir. API'nin güncel erişim koşulları, hız limitleri ve anahtar gereksinimleri değişebilir.
-- Kişisel API anahtarını HTML kaynak koduna sabit yazmayın veya GitHub'a yüklemeyin. Tarayıcıda girilen anahtar, tarayıcı üzerinden yapılan ağ isteklerinde görünür.
-- Diğer akademik kaynaklar için doğrudan makale çekilmez, yalnızca arama bağlantıları üretilir.
-- **İncele** yapay zekâ özeti değildir: özet metnini ve özette eşleşen yöntem terimlerini gösterir; sonuçları asıl makaleden doğrulayın.
-- Tarayıcı, çok sayıda sekmeyi açmayı engelleyebilir.
-- Makale PDF'lerinin telif ve erişim koşulları yayıncıya bağlıdır.
+> Projeye gerçek bir ekran görüntüsü eklemek için `assets/uygulama-ekrani.png` dosyasını yükleyip bu bölüme `![Uygulama ekran görüntüsü](assets/uygulama-ekrani.png)` satırını ekleyebilirsiniz.
 
-## Lisans
+## 🚀 Nasıl kullanılır?
 
-MIT — ayrıntılar için `LICENSE`.
+1. **[Uygulamayı açın](https://bartuemre.github.io/literatur-tarama/).**
+2. Anahtar kelimeleri her satıra bir sorgu gelecek şekilde girin.
+3. **En eski yıl** ve **sorgu başına makale sayısını** belirleyin.
+4. **Makaleleri Direkt Bul** butonuna basın.
+5. Başlık, dergi, yıl, atıf, DOI ve varsa PDF bağlantılarını inceleyin.
+6. Bir makaleyi işaretleyip **🔎 İncele** ile ön bilgilerini görüntüleyin.
+7. İsterseniz sonuçları **CSV İndir** ile kaydedin.
+
+## 🔎 İncele özelliği hakkında
+
+İncele paneli, OpenAlex'te bulunan metadata ve özet verisini kullanır. Kullanılan teknikler özetteki belirli terimlerin eşleşmesiyle tespit edilir. **Yapay zekâ ile tam metin analizi yapmaz**; makalenin yöntemini, problemini veya araştırmanın gerçekleştirildiği ülkeyi kesin olarak doğrulamaz. Akademik çalışmalarda asıl makaleyi kontrol edin.
+
+## 🛠️ Teknoloji ve veri kaynağı
+
+- **Ön yüz:** HTML, CSS, JavaScript
+- **Akademik veri:** [OpenAlex API](https://docs.openalex.org/)
+- **Yayımlama:** GitHub Pages
+- **Lisans:** [MIT](LICENSE)
+
+Arama internet bağlantısı ve OpenAlex API erişimi gerektirir. API erişim koşulları, anahtar gereksinimi ve kullanım sınırları zamanla değişebilir. Kişisel API anahtarlarını GitHub'a veya herkese açık HTML kaynak koduna eklemeyin.
+
+Bazı yayınlarda PDF bulunmayabilir; toplu sekme açma işlemleri tarayıcı tarafından engellenebilir. Diğer akademik platformlarda uygulama doğrudan makale çekmek yerine arama bağlantıları oluşturur.
+
+## 🤝 Katkıda bulunma
+
+Hata bildirimi ve geliştirme önerileri için GitHub Issues kullanabilirsiniz. Yerel geliştirme, değişiklik gönderme ve GitHub Pages yönergeleri için [CONTRIBUTING.md](CONTRIBUTING.md) dosyasına bakın.
+
+## 📄 Lisans
+
+Bu proje [MIT lisansı](LICENSE) ile sunulmaktadır.
