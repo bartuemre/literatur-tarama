@@ -20,6 +20,7 @@ Python, VS Code veya başka bir program yüklemeden, doğrudan tarayıcıda çal
 - **Toplu işlemler:** Makale bağlantılarını açma veya kopyalama
 - **CSV dışa aktarma:** Sonuçları tablo olarak kaydetme
 - **Ek kaynak bağlantıları:** Google Scholar, DergiPark, ScienceDirect, Semantic Scholar ve YÖK Tez Merkezi için arama URL'leri
+- **Mobil görünüm:** Sonuçlar dar ekranlarda kart olarak gösterilir; filtreleme sırasında seçili kayıtlar korunur
 
 ## 🖥️ Uygulama görünümü
 
